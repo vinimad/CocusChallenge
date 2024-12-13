@@ -1,0 +1,26 @@
+{
+  "name": "aut_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "runall": "pnpm exec playwright test",
+    "runui": "pnpm exec playwright test --ui",
+    "debug": "pnpm playwright test --debug",
+    "codegen": "pnpm playwright codegen",
+    "loginpage": "pnpm exec playwright test loginpage.spec.ts --project chromium",
+    "loginpage_debug": "pnpm exec playwright test loginpage.spec.ts --debug --project chromium",
+    "loginpageall": "pnpm exec playwright test loginpage.spec.ts",
+    "product": "pnpm exec playwright test product.spec.ts  --headed --project chromium",
+    "product_debug": "pnpm exec playwright test product.spec.ts --debug --project chromium",
+    "productall": "pnpm exec playwright test product.spec.ts",
+    "report": "pnpm exec playwright show-report"
+  },
+  "keywords": [],
+  "author": "Vinicius Monteiro",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.9.4"
+  }
+}
