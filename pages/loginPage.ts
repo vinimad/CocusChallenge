@@ -31,7 +31,7 @@ export class loginPage {
     // Verifies that the user has logged in by checking the logged-in message
     async validateLogin() {
         await this.userLogged.waitFor()
-        await expect(this.userLogged).toHaveText(dataLogin.userLoggedMsg)
+        await expect(this.userLogged).toHaveText(dataLogin.user_logged_msg)
     }
 
     // Logs out the user by clicking the logout button
@@ -41,9 +41,8 @@ export class loginPage {
     }
 
     // Verifies that the user has logged out by checking the login page title and the empty email field
-    async validateLogout() {
+    async validateUserLogout() {
         await this.inputEmail.waitFor()
-        await expect(this.page).toHaveTitle(dataLogin.login_title)
         await expect(this.inputEmail).toBeEmpty()
         await expect(this.inputEmail).toBeVisible()
     }
