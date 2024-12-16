@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "runall": "pnpm exec playwright test",
+    "runall": "pnpm exec playwright test --headed",
     "runui": "pnpm exec playwright test --ui",
     "debug": "pnpm playwright test --debug",
     "codegen": "pnpm playwright codegen",
